@@ -1,0 +1,123 @@
+@font-face {
+    font-family: Gagalin-Regular;
+    src: local("Gagalin-Regular"), url("../fonts/Gagalin-Regular.otf");
+}
+body {
+    background-color: darkgray;
+    font-size:14px;
+    background-color: #1F1F1F;
+    background-image: url("../img/gallery/pattern.png"), url("../img/gallery/0.jpg");
+    background-repeat: repeat, no-repeat;
+    background-attachment: fixed;
+    background-position: top left, center;
+    background-size: 10px, cover;
+    min-width: 400px;
+}
+/* начало шапки */
+.header {
+    text-align: center;
+    margin-bottom: 5px;
+}
+#main_title {
+    display: inline-block;
+    margin: 5px;
+    padding: 5px 10px;
+    border: 5px solid orangered;
+    -webkit-border-radius: 10px;
+    -moz-border-radius: 10px;
+    border-radius: 10px;
+    font-family: Gagalin-Regular, arial;
+    font-size: 50px;
+}
+#main_title_smile {
+    display: inline-block;
+    width: 0;
+    overflow: hidden;
+    font-family: Gagalin-Regular, arial;
+    font-size: 36px;
+    -webkit-transition: width 1s cubic-bezier(0.68, -0.55, 0.265, 1.55);
+    -moz-transition: width 1s cubic-bezier(0.68, -0.55, 0.265, 1.55);
+    -o-transition: width 1s cubic-bezier(0.68, -0.55, 0.265, 1.55);
+    transition: width 1s cubic-bezier(0.68, -0.55, 0.265, 1.55);
+}
+/* конец шапки */
+.content {
+    padding: 5px;
+}
+.imagesLine {
+    background-color: #666666;
+    border-radius: 10px;
+    padding: 3px;
+}
+.gWrapper {
+    white-space: nowrap;
+    overflow: hidden;
+    font-size:0; /* убираем горизонтальные отступы */
+    line-height:0; /* ...и вертикальные в некоторых браузерах */
+    letter-spacing:-1px; /* переубеждаем webkit'ы */
+}
+.linkForImg {
+    display: inline-block;
+    width: 65px;
+    height: 65px;
+    border: 3px solid #cc5500;
+    border-radius: 5px;
+    margin: 2px;
+    font-size:14px; /* Ќе забываем восстановить нормальные значени€ */
+    line-height:normal;
+    letter-spacing:normal;
+    display: -moz-inline-stack!important;
+    display:inline-block;
+        //display:inline;
+    zoom:1;
+}
+.bigImgLine {
+    display: block;
+    text-align: center;
+    overflow: hidden;
+    margin-top: 5px;
+}
+.currentImg {
+    display: block;
+    margin: auto;
+    background-image: url("../img/gallery/loader.gif");
+    background-position: center top;
+    background-repeat: no-repeat;
+    background-position-y: 25px;
+    min-height: 665px;
+}
+#currentImage {
+    border: 3px solid firebrick;
+    border-radius: 20px;
+}
+.gLine {
+    position: relative;
+    left: 0;
+    -webkit-transition: left 2s cubic-bezier(0.86, 0, 0.07, 1);
+    -moz-transition: left 2s cubic-bezier(0.86, 0, 0.07, 1);
+    -o-transition: left 2s cubic-bezier(0.86, 0, 0.07, 1);
+    transition: left 2s cubic-bezier(0.86, 0, 0.07, 1);
+}
+.button {
+    position: absolute;
+    top: 135px;
+    padding: 0;
+    background-color: gray;
+    border-radius: 15px;
+    border: 1px solid brown;
+    font-size: 24px;
+    line-height: 23px;
+    color: #444;
+    display: block;
+    z-index: 10;
+}
+.button-left {
+    left: 16px;
+}
+.button-right {
+    right: 16px;
+}
+.button:hover {
+    background-color: brown;
+    cursor: pointer;
+}
